@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Currículo em PDF</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <div id="container">
+    <div id="logo-paragr">  
+    <img src="cmaker-logo.png" alt="logo" id="img">
+    <p>Gerador de Curriculo em PDF</p>
+</div>
+
+  <form id="formulario">
+    <input type="text" placeholder="Seu nome completo" id="nome" required>
+    <input type="text" placeholder="Cargo desejado" id="cargo">
+    <input type="email" placeholder="E-mail" id="email" required>
+    <input type="tel" placeholder="Telefone" id="telefone" required>
+    <textarea placeholder="Resumo profissional" id="resumo"></textarea>
+    <textarea placeholder="Experiências profissionais" id="experiencia"></textarea>
+    <textarea placeholder="Formação acadêmica" id="formacao"></textarea>
+    <textarea placeholder="Habilidades" id="habilidades"></textarea>
+
+<label for="modelo">Escolha o modelo:</label>
+    <select id="modelo">
+      <option value="modelo1">Clássico</option>
+      <option value="modelo2">Moderno</option>
+    </select>
+
+    <label for="foto">Foto de perfil:</label>
+    <input type="file" id="foto" accept="image/*">
+
+    
+    <button type="button" onclick="gerarCurriculo()" id="bnt">Gerar PDF</button>
+  </form>
+</div>
+  <div id="curriculo" style="display:none;"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
